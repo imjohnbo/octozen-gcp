@@ -18,6 +18,9 @@ metadata:
   name: gke-test
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: gke-test
   strategy:
     rollingUpdate:
       maxSurge: 1
